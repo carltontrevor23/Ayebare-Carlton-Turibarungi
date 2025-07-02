@@ -1,14 +1,13 @@
 import requests
 
-# === CONFIGURATION ===
 TELEGRAM_BOT_TOKEN = '7910847201:AAG5eorIYAaRmVsCwqXEjoOGsv6uKdw7sj4'
 TELEGRAM_CHAT_ID = '@billboardbot256'  # Or use your numeric chat ID
 
-# === 1. Set your fixed post content ===
+#Content to be posted by bot
 def generate_post():
     return "Drake is a Canadian artist born in 1986 and has won 5 Grammys as of July 2025"
 
-# === 2. Send message to Telegram ===
+#Function for sending messages to Telegram
 def send_to_telegram(text):
     url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
     payload = {
